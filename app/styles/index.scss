@@ -1,1 +1,61 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+
+h1 {
+    font-family: 'Rubik Bubbles', cursive;
+    color: #c53d13;
+    font-size: 450%;;
+    display: flex;
+    justify-content: center;
+}
+
+ body {
+    background-color: #ff9e80;
+}
+
+.sign-up-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sign-in-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+@media only screen and (min-width: 300px) {
+  #sign-in-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+@media only screen and (min-width: 300px) {
+  #sign-up-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+ button {
+    background-color: #ff6e40;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+//   display: flex;
+    font-size: 12px;
+    margin: 2px 2px;
+}
+
+
+ // https://material.io/resources/color/#!/?view.left=0&view.right=0

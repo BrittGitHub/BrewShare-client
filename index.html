@@ -16,7 +16,7 @@
 
         <section id="auth-display"></section>
 
-        <h3>Sign Up</h3>
+        <h4 class="sign-up-header">Signup to start logging your favorite brews today!</h4>
         <form id="sign-up-form">
           <input name="credentials[email]" type="email" placeholder="Email">
           <input name="credentials[password]" type="password" placeholder="Enter password">
@@ -24,14 +24,14 @@
           <button type="submit">Sign Up</button>
         </form>
         
-        <h3>Sign In</h3>
+        <h4 class="sign-in-header">Already have an account, sign in below!</h4>
         <form id="sign-in-form">
           <input name="credentials[email]" type="email" placeholder="Email">
           <input name="credentials[password]" type="password" placeholder="Enter password">
           <button type="submit">Sign In</button>
         </form>
         
-        <h3>Change Password</h3>
+        <h4 class="change-password-header">Change Password</h4>
         <form id="change-password-form">
           <input name="passwords[old]" type="password" placeholder="Enter old password">
           <input name="passwords[new]" type="password" placeholder="Enter new password">
@@ -39,5 +39,42 @@
         </form>
         
         <button id="sign-out-button">Sign Out</button>
+
+        <!-- <h1>Brews</h1> -->
+        
+        <p id="error-message"></p>
+
+        <!-- <h3>Log a brew</h3> -->
+        <form id="create-beer">
+        <!-- <input name="beer[id]" type="text" placeholder="Beer ID"> -->
+        <input name="beer[name]" type="text" placeholder="Beer Name">
+        <input name="beer[beerStyle]" type="text" placeholder="Beer Style">
+        <button type="submit">Log a New Brew</button>
+        </form>
+        
+        <!-- <h3>Show Logged Brew</h3> -->
+        <form id="show-beer">
+          <input name="id" type="text" placeholder="Beer ID">
+          <button type="submit">Find a Logged Brew</button>
+        </form>
+
+        <!-- <h3>Show All Logged Brews</h3> -->
+        <button id="beers">Show All My Logged Brews</button>
+        
+        <!-- <h3>Delete Logged Brew</h3>
+        <form id="delete-beer">
+          <input name="id" type="text" placeholder="Beer ID">
+          <button type="submit">Delete beer</button>
+        </form> nhu
+        
+        <h3>Update Logged Brew</h3>
+        <form id="update-beer">
+          <input name="beer[id]" type="text" placeholder="Beer ID">
+          <input name="beer[name]" type="text" placeholder="Beer Name">
+          <input name="beer[beerStyle]" type="text" placeholder="Beer Style">
+          <button type="submit">Update beer</button>
+        </form> -->
+        
+        <section id="beers-display"></section>
     </body>
 </html>

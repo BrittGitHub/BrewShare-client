@@ -15,15 +15,14 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (response) {
   $('#auth-display').html('<p>User signed in successfully</p>')
 
-  // reset all forms
+  $('.change-password-header').hide()
+  $('#change-password-form').show()
+  $('#sign-out-button').show()
+  
   $('form').trigger('reset')
 
   console.log(response)
-  // store data from the response in my store object
   store.user = response.user
-
-  // reset single form
-  // $('#sign-in-form').trigger('reset')
 }
 
 const onSignInFailure = function () {

@@ -12,9 +12,16 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="https://imgur.com/nNMT0mA.jpg" width="30" height="30" class="d-inline-block align-top wdn-stretch rounded-corners" alt="">
+        </a>
+      </nav>
+      
       <h1>BrewShare</h1>
 
-        <section id="auth-display"></section>
+        <!-- <section id="auth-display"></section> -->
 
         <h4 class="sign-up-header">Signup to start logging your favorite brews today!</h4>
         <form id="sign-up-form">
@@ -23,6 +30,8 @@
           <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again">
           <button type="submit">Sign Up</button>
         </form>
+
+        <section class="sign-up-auth-display"></section>
         
         <h4 class="sign-in-header">Already have an account, sign in below!</h4>
         <form id="sign-in-form">
@@ -30,6 +39,8 @@
           <input name="credentials[password]" type="password" placeholder="Enter password">
           <button type="submit">Sign In</button>
         </form>
+
+        <section class="sign-in-auth-display"></section>
         
         <h4 class="change-password-header">Change Password</h4>
         <form id="change-password-form">
@@ -37,8 +48,14 @@
           <input name="passwords[new]" type="password" placeholder="Enter new password">
           <button type="submit">Change Password</button>
         </form>
+
+        <section class="change-password-auth-display"></section>
         
+        <section class="sign-out">
         <button id="sign-out-button">Sign Out</button>
+        </section>
+
+        <section class="sign-out-auth-display"></section>
 
         <!-- <h1>Brews</h1> -->
         

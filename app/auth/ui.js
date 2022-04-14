@@ -3,22 +3,36 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = function () {
-  $('#auth-display').html('<p>User signed up successfully</p>')
+  $('.sign-up-auth-display').html('')
+  $('.sign-up-auth-display').html('<p>User signed up successfully</p>')
 
   $('form').trigger('reset')
 }
 
 const onSignUpFailure = function () {
-  $('#auth-display').html('<p>Error while signing up</p>')
+  $('.sign-up-auth-display').html('<p>Error while signing up</p>')
 }
 
 const onSignInSuccess = function (response) {
-  $('#auth-display').html('<p>User signed in successfully</p>')
+  $('.sign-up-auth-display').html('')
+  $('.sign-in-auth-display').html('<p>User signed in successfully</p>')
+
+  $('.sign-up-header').hide()
+  $('#sign-up-form').hide()
+  $('.sign-up-auth-display').hide()
+
+  $('.sign-in-header').hide()
+  $('#sign-in-form').hide()
 
   $('.change-password-header').hide()
+  $('.change-password-auth-display').hide()
+  $('.change-password-header').show()
+  $('.change-password-auth-display').show()
   $('#change-password-form').show()
+
   $('#sign-out-button').show()
-  
+  $('.sign-out-auth-display').show()
+
   $('form').trigger('reset')
 
   console.log(response)
@@ -26,27 +40,38 @@ const onSignInSuccess = function (response) {
 }
 
 const onSignInFailure = function () {
-  $('#auth-display').html('<p>Error while signing in</p>')
+  $('.sign-in-auth-display').html('<p>Error while signing in</p>')
 }
 
 const onChangePasswordSuccess = function () {
-  $('#auth-display').html('<p>User changed password successfully</p>')
+  $('.change-password-auth-display').html('<p>User changed password successfully</p>')
 
   $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = function () {
-  $('#auth-display').html('<p>Error while changing password</p>')
+  $('.change-password-auth-display').html('<p>Error while changing password</p>')
 }
 
 const onSignOutSuccess = function () {
-  $('#auth-display').html('<p>User signed out successfully</p>')
+  $('.sign-out-auth-display').html('')
+  $('.sign-out-auth-display').html('<p>User signed out successfully</p>')
+
+  $('.change-password-header').hide()
+  $('#change-password-form').hide()
+  $('#sign-out-button').hide()
+
+  $('.sign-in-header').show()
+  $('.sign-in-auth-display').hide()
+  $('#sign-in-form').show()
+  $('.sign-up-header').show()
+  $('#sign-up-form').show()
 
   $('form').trigger('reset')
 }
 
 const onSignOutFailure = function () {
-  $('#auth-display').html('<p>Error while signing out</p>')
+  $('.sign-out-auth-display').html('<p>Error while signing out</p>')
 }
 
 module.exports = {

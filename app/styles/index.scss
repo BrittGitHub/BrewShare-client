@@ -1,13 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
+img.rounded-corners {
+  border-radius: 5px;
+}
 
-h1 {
+@media only screen and (min-width: 375px) { 
+  h1 {
     font-family: 'Rubik Bubbles', cursive;
     color: #c53d13;
-    font-size: 450%;;
+    font-size: 300%;
     display: flex;
     justify-content: center;
+}
 }
 
  body {
@@ -21,12 +26,71 @@ h1 {
   margin-top: 30px;
 }
 
+.sign-up-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  visibility: visible;
+  font-family: 'Fredericka the Great', serif;
+  margin-top: 20px;
+}
+
 .sign-in-header {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+.sign-in-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  visibility: visible;
+  font-family: 'Fredericka the Great', serif;
+  margin-top: 20px;
 }
 
+.change-password-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.change-password-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  visibility: visible;
+  font-family: 'Fredericka the Great', serif;
+  margin-top: 20px;
+}
+
+.sign-out {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.sign-out-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  visibility: visible;
+  font-family: 'Fredericka the Great', serif;
+  margin-top: 20px;
+}
+
+// p.sign-in-auth-display {
+//   transition-duration:1s; /* <= creates fade out effect */
+//   transition-delay:1s;
+// }
+
+
+@media only screen and (min-width: 300px) {
+  #sign-up-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
 
 @media only screen and (min-width: 300px) {
   #sign-in-form {
@@ -37,12 +101,21 @@ h1 {
 }
 
 @media only screen and (min-width: 300px) {
-  #sign-up-form {
+  #change-password-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 }
+
+@media only screen and (min-width: 360px) {
+  .navbar {
+  display: flex;
+  justify-content: left;
+}
+}
+
+
 
  button {
     background-color: #ff6e40;

@@ -58,15 +58,13 @@ img.rounded-corners {
   display: flex;
   justify-content: center;
   height: 20px;
-  visibility: visible;
+  // visibility: visible;
   font-family: 'Fredericka the Great', serif;
   margin-top: 20px;
 }
 
 .sign-out {
-  display: flex;
-  justify-content: center;
-  padding-top: 25px;
+margin-left: auto;
 }
 
 .sign-out-auth-display {
@@ -78,10 +76,10 @@ img.rounded-corners {
   margin-top: 20px;
 }
 
-// p.sign-in-auth-display {
-//   transition-duration:1s; /* <= creates fade out effect */
-//   transition-delay:1s;
-// }
+p.sign-in-auth-display {
+  transition-duration:1s; /* <= creates fade out effect */
+  transition-delay:1s;
+}
 
 
 @media only screen and (min-width: 300px) {
@@ -115,9 +113,7 @@ img.rounded-corners {
 }
 }
 
-
-
- button {
+button {
     background-color: #ff6e40;
     border: none;
     border-radius: 8px;
@@ -128,6 +124,27 @@ img.rounded-corners {
 //   display: flex;
     font-size: 12px;
     margin: 2px 2px;
+}
+
+.btn-primary {
+    background-color: #ff6e40;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+//   display: flex;
+    font-size: 12px;
+    margin: 2px 2px;
+}
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 }
 
 

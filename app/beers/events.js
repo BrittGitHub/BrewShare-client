@@ -94,6 +94,13 @@ const onCreateBeer = (event) => {
     .catch(() => beersUi.onCreateBeerFailure())
 }
 
+// const onPullUpForm = function () {
+//   beersApi
+//     .pullUpForm()
+//     .then(() => beersUi.onPullUpFormSuccess())
+//     .catch(() => beersUi.onPullUpFormFailure())
+// }
+
 const onDeleteListBeer = function (event) {
   // event.target will tell us more information about the thing that was clicked
   const deleteButton = event.target
@@ -141,4 +148,5 @@ module.exports = {
   onCreateBeer,
   onDeleteListBeer,
   onUpdateListBeer
+  // onPullUpForm
 }

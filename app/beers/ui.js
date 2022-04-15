@@ -11,16 +11,37 @@ const onIndexBeersSuccess = function (response) {
     // beersHtml = beersHtml + '<li>' + beer.name + '</li>'
 
     beersHtml += `
-                      <div>
-                        <h4>${beer.name}</h4>
-                        <p>${beer.beerStyle}</p>
+                  <div class="card">
+                    <h2 class="card-header text-center" style="height: 5rem">${beer.name}</h2>
+                    <div class="card-body">
+                        <p><b>Beer Style</b>: ${beer.beerStyle}</p>
+                        <p><b>ABV</b>:${beer.abv}%</p>
+                        <p><b>Brewer</b>: ${beer.brewer}</p>
+                        <p><b>Brewer Country</b>: ${beer.brewerCountry}</p>
+                        <p><b>Consumption Type</b>(Draught, can, bottle, etc.): ${beer.consumptionType}</p>
+                        <p><b>Rating Number</b>(0-5, 5 is Excellent): ${beer.personalRatingNum}</p>
+                        <p><b>Rating and Brew Description</b>: ${beer.ratingDescription}</p>
+                        <p><b>Purchase Location</b>: ${beer.purchasedLocation}</p>
+                        <p><b>Purchase Price</b>: ${beer.purchasedPrice}</p>
+                        <p><b>Date Purchased</b>: ${beer.purchasedDate}</p>
+
                         <form class="update-beer-list" data-id=${beer._id}>
-                            <input name="beer[name]" type="text" placeholder="Beer Name">
-                            <input name="beer[beerStyle]" type="text" placeholder="Beer Style">
-                            <button type="submit">Update beer</button>
+                          <input name="beer[name]" type="text" placeholder="Beer Name">
+                          <input name="beer[beerStyle]" type="text" placeholder="Beer Style">
+                          <input name="beer[abv]" type="text" placeholder="ABV">
+                          <input name="beer[brewer]" type="text" placeholder="Brewer">
+                          <input name="beer[brewerCountry]" type="text" placeholder="Brewer Country">
+                          <input name="beer[consumptionType]" type="text" placeholder="Consumption Type">
+                          <input name="beer[personalRatingNum]" type="text" placeholder="Rating Number">
+                          <input name="beer[ratingDescription]" type="text" placeholder="Rating/Beer Description">
+                          <input name="beer[purchasedLocation]" type="text" placeholder="Purchase Location">
+                          <input name="beer[purchasedPrice]" type="text" placeholder="Purchase Price">
+                          <input name="beer[purchasedDate]" type="text" placeholder="Purchase Date">
+                          <button type="submit">Update beer</button>
                         </form>
                         <button class="delete-beer-list" data-id=${beer._id}>Delete beer</button>
-                      </div>
+                    </div>
+                  </div>
                     `
   })
 
@@ -52,13 +73,6 @@ const onShowBeerFailure = function () {
 }
 
 const onDeleteBeerSuccess = function () {
-  // const beerHtml = `
-  //   <div>
-  //     <h4>${response.beer.name}</h4>
-  //     <p>${response.beer.author}</p>
-  //     <p>Review: 10 Stars</p>
-  //   </div>
-  // `
   $('#beers-display').html('Success. Beer deleted!')
 
   $('form').trigger('reset')
@@ -69,13 +83,6 @@ const onDeleteBeerFailure = function () {
 }
 
 const onUpdateBeerSuccess = function () {
-  // const beerHtml = `
-  //   <div>
-  //     <h4>${response.beer.name}</h4>
-  //     <p>${response.beer.author}</p>
-  //     <p>Review: 10 Stars</p>
-  //   </div>
-  // `
   $('#beers-display').html('Success. Beer updated!')
 
   $('form').trigger('reset')
@@ -87,10 +94,21 @@ const onUpdateBeerFailure = function () {
 
 const onCreateBeerSuccess = function (response) {
   const beerHtml = `
-                      <div>
-                        <h4>${response.beer.name}</h4>
-                        <p>${response.beer.beerStyle}</p>
-                        <p>Beer just created</p>
+                      <div class="card">
+                        <h2 class="card-header text-center" style="height: 5rem">${response.beer.name}</h2>
+                          <div class="card-body">
+                          <p><b>Beer Style</b>: ${response.beer.beerStyle}</p>
+                          <p><b>ABV</b>:${response.beer.abv}%</p>
+                          <p><b>Brewer</b>: ${response.beer.brewer}</p>
+                          <p><b>Brewer Country</b>: ${response.beer.brewerCountry}</p>
+                          <p><b>Consumption Type</b>(Draught, can, bottle, etc.): ${response.beer.consumptionType}</p>
+                          <p><b>Rating Number</b>(0-5, 5 is Excellent): ${response.beer.personalRatingNum}</p>
+                          <p><b>Rating and Brew Description</b>: ${response.beer.ratingDescription}</p>
+                          <p><b>Purchase Location</b>: ${response.beer.purchasedLocation}</p>
+                          <p><b>Purchase Price</b>: ${response.beer.purchasedPrice}</p>
+                          <p><b>Date Purchased</b>: ${response.beer.purchasedDate}</p>
+                          <p>Here is your logged brew!</p>
+                          </div>
                       </div>
                     `
   $('#beers-display').html(beerHtml)
@@ -100,8 +118,14 @@ const onCreateBeerSuccess = function (response) {
 
 const onCreateBeerFailure = function () {
   $('#error-message').text('Failure while trying to create beer')
-  // console.log(err)
 }
+
+// const onPullUpFormSuccess = function () {
+//   console.log('in here')
+// }
+// const onPullUpFormFailure = function () {
+//   console.log('in here')
+// }
 
 module.exports = {
   onIndexBeersSuccess,
@@ -114,4 +138,6 @@ module.exports = {
   onUpdateBeerFailure,
   onCreateBeerSuccess,
   onCreateBeerFailure
+  // onPullUpFormSuccess,
+  // onPullUpFormFailure
 }

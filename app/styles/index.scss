@@ -30,9 +30,10 @@ img.rounded-corners {
   display: flex;
   justify-content: center;
   height: 20px;
-  visibility: visible;
+  // visibility: visible;
   font-family: 'Fredericka the Great', serif;
   margin-top: 20px;
+  display: hidden;
 }
 
 .sign-in-header {

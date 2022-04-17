@@ -44,7 +44,7 @@ const onSignIn = function (event) {
 
 const onPullUpChangeForm = function () {
   $('#change-password-form').toggle()
-  $('changePassCard').toggle()
+  $('.changePassCard').toggle()
 }
 
 const onChangePassword = function (event) {

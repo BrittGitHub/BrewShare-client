@@ -3,7 +3,6 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = function () {
-  $('.sign-up-auth-display').html('')
   $('.sign-up-auth-display').html('<p>User signed up successfully</p>')
 
   $('form').trigger('reset')
@@ -14,7 +13,8 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
-  $('.sign-in-auth-display').html('')
+  $('.sign-up-auth-display').html('')
+  $('.change-password-auth-display').html('')
   $('.sign-in-auth-display').html('<p>User signed in successfully</p>')
 
   $('.sign-up-header').hide()
@@ -28,7 +28,6 @@ const onSignInSuccess = function (response) {
   $('.change-password-auth-display').hide()
   $('.change-password-header').show()
   $('.change-password-auth-display').show()
-  // $('#change-password-form').show()
 
   $('.pullUpChangePass').show()
   $('#pullUpChangePassButton').show()
@@ -38,9 +37,6 @@ const onSignInSuccess = function (response) {
   $('.sign-out-auth-display').html('')
   $('.sign-out-auth-display').show()
   $('.addNewBeer').show()
-  // $('.createBeerCard').show()
-  // $('.card-header').show()
-  // $('#create-beer').show()
   $('#show-beer').show()
   $('#index-beers').show()
 
@@ -69,9 +65,8 @@ const onSignOutSuccess = function () {
 
   $('.change-password-header').hide()
   $('#change-password-form').hide()
+  $('.change-password-auth-display').hide()
   $('#sign-out-button').hide()
-  // $('.card-header1').hide()
-  // $('.card-header2').hide()
   $('#create-beer').hide()
   $('#show-beer').hide()
   $('#index-beers').hide()

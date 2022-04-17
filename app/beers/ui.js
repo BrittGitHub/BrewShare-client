@@ -97,7 +97,7 @@ const onUpdateBeerFailure = function () {
 const onCreateBeerSuccess = function (response) {
   const beerHtml = `
                       <div class="card onCreateSuccess">
-                        <h2 class="card-header onCreateSuccess text-center" style="height: 5rem">${response.beer.name}</h2>
+                        <h2 class="card-header onCreateSuccess text-center" style="height: 3rem">${response.beer.name}</h2>
                           <div class="card-body">
                           <p><b>Beer Style</b>: ${response.beer.beerStyle}</p>
                           <p><b>ABV</b>:${response.beer.abv || ''}%</p>

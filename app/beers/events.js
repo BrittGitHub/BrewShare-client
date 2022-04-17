@@ -14,8 +14,9 @@ const store = require('../store.js')
 
 const onIndexBeers = () => {
   $('#beers-display').toggle()
-  // get the beers from the API
-  // check the Network tab!
+  // $('.card.onCreateSuccess').toggle()
+  $('.card.onCreateSuccess').html('')
+
   beersApi
     .indexBeers()
     // JavaScript Promises
@@ -27,7 +28,6 @@ const onIndexBeers = () => {
 
 const onShowBeer = (event) => {
   event.preventDefault()
-  console.log('in events.js')
 
   const form = event.target
   const data = getFormFields(form)
@@ -42,7 +42,6 @@ const onShowBeer = (event) => {
 const onDeleteBeer = (event) => {
   // prevent the page from reloading due to the submit action
   event.preventDefault()
-  console.log('in events.js')
 
   // store the element that emitted the event in a variable
   const form = event.target
@@ -76,7 +75,6 @@ const onUpdateBeer = (event) => {
 const onCreateBeer = (event) => {
   // prevent the page from reloading due to the submit action
   event.preventDefault()
-  console.log('in events.js')
 
   // store the element that emitted the event in a variable
   const form = event.target
@@ -101,7 +99,6 @@ const onPullUpForm = function () {
 }
 
 const onUpdateCurrentBeerCard = function () {
-  console.log('in button event')
   $('.update-beer-list').toggle()
 }
 

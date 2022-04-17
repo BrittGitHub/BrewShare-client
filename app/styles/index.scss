@@ -168,7 +168,7 @@ button {
   border-color: #ff6e40;
 }
 
-.card-header.indexBeerCard {
+.card.indexBeerCard {
    display: hidden;
 }
 
@@ -186,6 +186,10 @@ button {
   display: hidden;
   background-color: #ff9e80;
   border-color: #ff9e80;
+}
+
+.update-beer-list {
+   display: hidden;
 }
 
 

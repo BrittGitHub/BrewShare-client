@@ -13,7 +13,7 @@ const getFormFields = require('../../lib/get-form-fields.js')
 const store = require('../store.js')
 
 const onIndexBeers = () => {
-  console.log('in event listener!!!!!')
+  $('#beers-display').toggle()
   // get the beers from the API
   // check the Network tab!
   beersApi
@@ -60,7 +60,6 @@ const onDeleteBeer = (event) => {
 const onUpdateBeer = (event) => {
   // prevent the page from reloading due to the submit action
   event.preventDefault()
-  console.log('in events.js')
 
   // store the element that emitted the event in a variable
   const form = event.target
@@ -99,6 +98,11 @@ const onPullUpForm = function () {
   $('#create-beer').toggle()
   $('.card-header.createBeerCard').toggle()
   $('#new-beer-display').toggle()
+}
+
+const onUpdateCurrentBeerCard = function () {
+  console.log('in button event')
+  $('.update-beer-list').toggle()
 }
 
 const onDeleteListBeer = function (event) {
@@ -148,5 +152,6 @@ module.exports = {
   onCreateBeer,
   onDeleteListBeer,
   onUpdateListBeer,
-  onPullUpForm
+  onPullUpForm,
+  onUpdateCurrentBeerCard
 }

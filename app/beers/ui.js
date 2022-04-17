@@ -25,6 +25,8 @@ const onIndexBeersSuccess = function (response) {
                         <p><b>Purchase Price</b>: ${beer.purchasedPrice || ''}</p>
                         <p><b>Date Purchased</b>: ${beer.purchasedDate || ''}</p>
 
+                        <button class="update-current-beer" data-id=${beer._id}>update current beer</button>
+
                         <form class="update-beer-list" data-id=${beer._id}>
                           <input name="beer[name]" type="text" placeholder="Beer Name">
                           <input name="beer[beerStyle]" type="text" placeholder="Beer Style">
@@ -46,7 +48,7 @@ const onIndexBeersSuccess = function (response) {
   })
 
   $('#beers-display').html(beersHtml)
-
+  $('.update-beer-list').hide()
   $('form').trigger('reset')
 
   $('#error-message').text('')

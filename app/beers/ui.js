@@ -11,8 +11,8 @@ const onIndexBeersSuccess = function (response) {
     // beersHtml = beersHtml + '<li>' + beer.name + '</li>'
 
     beersHtml += `
-                  <div class="card">
-                    <h2 class="card-header text-center" style="height: 3rem">${beer.name}</h2>
+                  <div class="card indexBeerCard">
+                    <h2 class="card-header indexBeerCard text-center" style="height: 3rem">${beer.name}</h2>
                     <div class="card-body">
                         <p><b>Beer Style</b>: ${beer.beerStyle}</p>
                         <p><b>ABV</b>:${beer.abv || ''}%</p>
@@ -94,8 +94,8 @@ const onUpdateBeerFailure = function () {
 
 const onCreateBeerSuccess = function (response) {
   const beerHtml = `
-                      <div class="card">
-                        <h2 class="card-header text-center" style="height: 5rem">${response.beer.name}</h2>
+                      <div class="card onCreateSuccess">
+                        <h2 class="card-header onCreateSuccess text-center" style="height: 5rem">${response.beer.name}</h2>
                           <div class="card-body">
                           <p><b>Beer Style</b>: ${response.beer.beerStyle}</p>
                           <p><b>ABV</b>:${response.beer.abv || ''}%</p>

@@ -95,10 +95,10 @@ const onCreateBeer = (event) => {
 }
 
 const onPullUpForm = function () {
-  $('.createBeerCard').toggle()
+  $('.card.createBeerCard').toggle()
   $('#create-beer').toggle()
-  $('.card-header').toggle()
-  // $('#new-beer-display').toggle()
+  $('.card-header.createBeerCard').toggle()
+  $('#new-beer-display').toggle()
 }
 
 const onDeleteListBeer = function (event) {

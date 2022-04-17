@@ -152,7 +152,27 @@ button {
   display: hidden;
 }
 
-h2.card-header {
+.card-header.createBeerCard {
+  display: hidden;
+  background-color:#ff6e40;
+  border-color: #ff6e40;
+}
+
+.card.onCreateSuccess {
+  display: hidden;
+}
+
+.card-header.onCreateSuccess {
+  display: hidden;
+  background-color:#ff6e40;
+  border-color: #ff6e40;
+}
+
+.card-header.indexBeerCard {
+   display: hidden;
+}
+
+.card-header.indexBeerCard {
   display: hidden;
   background-color:#ff6e40;
   border-color: #ff6e40;

@@ -12,18 +12,18 @@ const onIndexBeersSuccess = function (response) {
 
     beersHtml += `
                   <div class="card">
-                    <h2 class="card-header text-center" style="height: 5rem">${beer.name}</h2>
+                    <h2 class="card-header text-center" style="height: 3rem">${beer.name}</h2>
                     <div class="card-body">
                         <p><b>Beer Style</b>: ${beer.beerStyle}</p>
-                        <p><b>ABV</b>:${beer.abv}%</p>
+                        <p><b>ABV</b>:${beer.abv || ''}%</p>
                         <p><b>Brewer</b>: ${beer.brewer}</p>
                         <p><b>Brewer Country</b>: ${beer.brewerCountry}</p>
                         <p><b>Consumption Type</b>(Draught, can, bottle, etc.): ${beer.consumptionType}</p>
-                        <p><b>Rating Number</b>(0-5, 5 is Excellent): ${beer.personalRatingNum}</p>
+                        <p><b>Rating Number</b>(0-5, 5 is Excellent): ${beer.personalRatingNum || ''}</p>
                         <p><b>Rating and Brew Description</b>: ${beer.ratingDescription}</p>
                         <p><b>Purchase Location</b>: ${beer.purchasedLocation}</p>
-                        <p><b>Purchase Price</b>: ${beer.purchasedPrice}</p>
-                        <p><b>Date Purchased</b>: ${beer.purchasedDate}</p>
+                        <p><b>Purchase Price</b>: ${beer.purchasedPrice || ''}</p>
+                        <p><b>Date Purchased</b>: ${beer.purchasedDate || ''}</p>
 
                         <form class="update-beer-list" data-id=${beer._id}>
                           <input name="beer[name]" type="text" placeholder="Beer Name">
@@ -98,20 +98,20 @@ const onCreateBeerSuccess = function (response) {
                         <h2 class="card-header text-center" style="height: 5rem">${response.beer.name}</h2>
                           <div class="card-body">
                           <p><b>Beer Style</b>: ${response.beer.beerStyle}</p>
-                          <p><b>ABV</b>:${response.beer.abv}%</p>
+                          <p><b>ABV</b>:${response.beer.abv || ''}%</p>
                           <p><b>Brewer</b>: ${response.beer.brewer}</p>
                           <p><b>Brewer Country</b>: ${response.beer.brewerCountry}</p>
                           <p><b>Consumption Type</b>(Draught, can, bottle, etc.): ${response.beer.consumptionType}</p>
-                          <p><b>Rating Number</b>(0-5, 5 is Excellent): ${response.beer.personalRatingNum}</p>
+                          <p><b>Rating Number</b>(0-5, 5 is Excellent): ${response.beer.personalRatingNum || ''}</p>
                           <p><b>Rating and Brew Description</b>: ${response.beer.ratingDescription}</p>
                           <p><b>Purchase Location</b>: ${response.beer.purchasedLocation}</p>
-                          <p><b>Purchase Price</b>: ${response.beer.purchasedPrice}</p>
-                          <p><b>Date Purchased</b>: ${response.beer.purchasedDate}</p>
+                          <p><b>Purchase Price</b>: ${response.beer.purchasedPrice || ''}</p>
+                          <p><b>Date Purchased</b>: ${response.beer.purchasedDate || ''}</p>
                           <p>Here is your logged brew!</p>
                           </div>
                       </div>
                     `
-  $('#beers-display').html(beerHtml)
+  $('#new-beer-display').html(beerHtml)
 
   $('form').trigger('reset')
 }
@@ -119,13 +119,6 @@ const onCreateBeerSuccess = function (response) {
 const onCreateBeerFailure = function () {
   $('#error-message').text('Failure while trying to create beer')
 }
-
-// const onPullUpFormSuccess = function () {
-//   console.log('in here')
-// }
-// const onPullUpFormFailure = function () {
-//   console.log('in here')
-// }
 
 module.exports = {
   onIndexBeersSuccess,

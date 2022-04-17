@@ -51,8 +51,7 @@ const createBeer = function (data) {
   console.log(data)
   return $.ajax({
     method: 'POST',
-    // url: config.apiUrl + '/beers',
-    url: 'http://localhost:4741/beers',
+    url: config.apiUrl + '/beers',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },

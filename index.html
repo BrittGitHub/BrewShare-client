@@ -17,9 +17,7 @@
         <a class="navbar-brand" href="#">
           <img src="https://imgur.com/nNMT0mA.jpg" width="30" height="30" class="d-inline-block align-top wdn-stretch rounded-corners" alt="">
         </a>
-        <!-- <section class="NewBeerFormPopUp">
-          <button id="newBeerPopUpButton">Add New Beer+</button>
-        </section> -->
+
         <section class="sign-out .ml-auto">
           <button id="sign-out-button">Sign Out</button>
         </section>
@@ -45,19 +43,20 @@
         </form>
 
         <section class="sign-in-auth-display"></section>
-        
-        <h4 class="change-password-header">Change Password</h4>
+
+        <section class="pullUpChangePass">
+          <button id="pullUpChangePassButton">Change Password +</button>
+        </section>
+        <div class="card changePassCard">
+        <!-- <h4 class="change-password-header">Change Password</h4> -->
         <form id="change-password-form">
           <input name="passwords[old]" type="password" placeholder="Enter old password">
           <input name="passwords[new]" type="password" placeholder="Enter new password">
           <button type="submit">Change Password</button>
         </form>
+        </div>
 
         <section class="change-password-auth-display"></section>
-        
-        <!-- <section class="sign-out">
-        <button id="sign-out-button">Sign Out</button>
-        </section> -->
 
         <section class="sign-out-auth-display"></section>
 
@@ -80,6 +79,10 @@
         <button type="submit">Log a New Brew</button>
         </form> -->
 
+        <section class="addNewBeer">
+          <button id="addNewBeerButton">Log a New Beer +</button>
+        </section>
+
         <div class="card createBeerCard">
         <h2 class="card-header text-center" style="height: 3rem">Log A Beer!</h2>
         <form id="create-beer">
@@ -92,8 +95,8 @@
             <input name="beer[beerStyle]" type="text" class="form-control" placeholder="Style">
           </div>
           <div class="form-group">
-            <label for="abv">ABV</label>
-            <input name="beer[abv]" type="text" class="form-control" placeholder="ABV">
+            <label for="abv">ABV%</label>
+            <input name="beer[abv]" type="text" class="form-control" placeholder="ABV Percentage Number Only">
           </div>
           <div class="form-group">
             <label for="brewer">Brewer</label>
@@ -108,7 +111,7 @@
             <input name="beer[consumptionType]" type="text" class="form-control" placeholder="Bottle, Can, Draught, etc">
           </div>
           <div class="form-group">
-            <label for="personalRatingNum">Rating</label>
+            <label for="personalRatingNum">Rating(Number)</label>
             <input name="beer[personalRatingNum]" type="text" class="form-control" placeholder="0-5, 5 being excellent">
           </div>
           <div class="form-group">
@@ -121,7 +124,7 @@
           </div>
           <div class="form-group">
             <label for="purchasedPrice">Purchase Price</label>
-            <input name="beer[purchasedPrice]" type="text" class="form-control" placeholder="What was teh cost of the beer?">
+            <input name="beer[purchasedPrice]" type="text" class="form-control" placeholder="What was the cost of the beer?">
           </div>
           <div class="form-group">
             <label for="purchasedDate">Date of Purchase</label>
@@ -133,6 +136,9 @@
           <button type="submit" class="btn btn-primary">Log a New Brew</button>
         </form>
         </div>
+
+        <section id="new-beer-display"></section>
+
         
         <!-- <h3>Show Logged Brew</h3> -->
         <!-- <form id="show-beer">

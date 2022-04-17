@@ -42,6 +42,11 @@ const onSignIn = function (event) {
     .catch(() => authUi.onSignInFailure())
 }
 
+const onPullUpChangeForm = function () {
+  $('#change-password-form').toggle()
+  $('changePassCard').toggle()
+}
+
 const onChangePassword = function (event) {
   event.preventDefault()
 
@@ -67,5 +72,6 @@ module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onPullUpChangeForm
 }

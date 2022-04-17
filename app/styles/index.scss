@@ -144,7 +144,28 @@ button {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
+  border-color: #ff9e80;
+  border-color:#ff6e40;
+}
 
+.card.createBeerCard {
+  display: hidden;
+}
+
+h2.card-header {
+  display: hidden;
+  background-color:#ff6e40;
+  border-color: #ff6e40;
+}
+
+#new-beer-display {
+  display: hidden;
+}
+
+.card.changePassCard {
+  display: hidden;
+  background-color: #ff9e80;
+  border-color: #ff9e80;
 }
 
 

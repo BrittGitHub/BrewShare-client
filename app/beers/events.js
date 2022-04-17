@@ -94,12 +94,12 @@ const onCreateBeer = (event) => {
     .catch(() => beersUi.onCreateBeerFailure())
 }
 
-// const onPullUpForm = function () {
-//   beersApi
-//     .pullUpForm()
-//     .then(() => beersUi.onPullUpFormSuccess())
-//     .catch(() => beersUi.onPullUpFormFailure())
-// }
+const onPullUpForm = function () {
+  $('.createBeerCard').toggle()
+  $('#create-beer').toggle()
+  $('.card-header').toggle()
+  // $('#new-beer-display').toggle()
+}
 
 const onDeleteListBeer = function (event) {
   // event.target will tell us more information about the thing that was clicked
@@ -147,6 +147,6 @@ module.exports = {
   onUpdateBeer,
   onCreateBeer,
   onDeleteListBeer,
-  onUpdateListBeer
-  // onPullUpForm
+  onUpdateListBeer,
+  onPullUpForm
 }

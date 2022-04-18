@@ -1,8 +1,8 @@
-# Tic-Tac-Toe
+# BrewShare
 
 BrewShare allows you to log brews that you love(or not love so much)! You can keep track of brews you have tried along wih details about the brew! 
 
-## To Play for Yourself:
+## Link
 
 Please visit the following link: https://brittgithub.github.io/BrewShare-client/
 

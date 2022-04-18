@@ -14,7 +14,7 @@ const indexBeers = function () {
 }
 
 const showBeer = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/beers/' + data.id,
@@ -25,7 +25,7 @@ const showBeer = function (data) {
 }
 
 const deleteBeer = function (id) {
-  console.log(id)
+  // console.log(id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/beers/' + id,
@@ -36,7 +36,7 @@ const deleteBeer = function (id) {
 }
 
 const updateBeer = function (data, id) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/beers/' + id,
@@ -48,7 +48,7 @@ const updateBeer = function (data, id) {
 }
 
 const createBeer = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/beers',

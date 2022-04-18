@@ -31,7 +31,7 @@ const onShowBeer = (event) => {
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   beersApi
     .showBeer(data)
@@ -47,7 +47,7 @@ const onDeleteBeer = (event) => {
   const form = event.target
   // pass the form to getFormFields and store the data object in another variable
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   beersApi
     // .deleteBook(data)
@@ -64,7 +64,7 @@ const onUpdateBeer = (event) => {
   const form = event.target
   // pass the form to getFormFields and store the data object in another variable
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   beersApi
     .updateBeer(data, data.beer.id)
@@ -83,7 +83,7 @@ const onCreateBeer = (event) => {
 
   // puts the user(from the store) as the owner
   data.beer.owner = store.user
-  console.log(data)
+  // console.log(data)
 
   beersApi
     .createBeer(data)
@@ -109,7 +109,7 @@ const onDeleteListBeer = function (event) {
   // we need to find the id of the beer
   const beerId = $(deleteButton).data('id')
 
-  console.log(beerId)
+  // console.log(beerId)
 
   beersApi
     // .deleteBeer({ id: beerId })
@@ -128,8 +128,8 @@ const onUpdateListBeer = function (event) {
 
   // use getFormFields to get the data from the form
   const data = getFormFields(updateForm)
-  console.log(data)
-  console.log(beerId)
+  // console.log(data)
+  // console.log(beerId)
   // data.beer.id = beerId
 
   beersApi

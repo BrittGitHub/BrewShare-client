@@ -30,7 +30,6 @@ img.rounded-corners {
   display: flex;
   justify-content: center;
   height: 20px;
-  // visibility: visible;
   font-family: 'Fredericka the Great', serif;
   margin-top: 20px;
   display: hidden;
@@ -45,7 +44,7 @@ img.rounded-corners {
   display: flex;
   justify-content: center;
   height: 20px;
-  visibility: visible;
+  // visibility: visible;
   font-family: 'Fredericka the Great', serif;
   margin-top: 20px;
 }
@@ -77,10 +76,10 @@ margin-left: auto;
   margin-top: 20px;
 }
 
-p.sign-in-auth-display {
-  transition-duration:1s; /* <= creates fade out effect */
-  transition-delay:1s;
-}
+// p.sign-in-auth-display {
+//   transition-duration:1s; /* <= creates fade out effect */
+//   transition-delay:1s;
+// }
 
 
 @media only screen and (min-width: 300px) {

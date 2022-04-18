@@ -8,7 +8,6 @@ const beerEvents = require('./beers/events.js')
 $(() => {
   $('.change-password-header').hide()
   $('#change-password-form').hide()
-  // $('.pullUpChangePass').hide()
   $('#pullUpChangePassButton').hide()
   $('.changePassCard').hide()
   $('#sign-out-button').hide()

@@ -16,6 +16,7 @@ const onSignInSuccess = function (response) {
   $('.sign-up-auth-display').html('')
   $('.change-password-auth-display').html('')
   $('.sign-in-auth-display').html('<p>User signed in successfully</p>')
+  $('.sign-in-auth-display').show()
 
   $('.sign-up-header').hide()
   $('#sign-up-form').hide()
@@ -42,7 +43,7 @@ const onSignInSuccess = function (response) {
 
   $('form').trigger('reset')
 
-  console.log(response)
+  // console.log(response)
   store.user = response.user
 }
 
@@ -58,6 +59,8 @@ const onChangePasswordSuccess = function () {
 
 const onChangePasswordFailure = function () {
   $('.change-password-auth-display').html('<p>Error while changing password</p>')
+
+  $('form').trigger('reset')
 }
 
 const onSignOutSuccess = function () {
@@ -78,6 +81,7 @@ const onSignOutSuccess = function () {
   $('#sign-in-form').show()
   $('.sign-up-header').show()
   $('#sign-up-form').show()
+  $('.sign-up-auth-display').show()
 
   $('form').trigger('reset')
 }

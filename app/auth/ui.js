@@ -68,7 +68,6 @@ const onSignOutSuccess = function () {
 
   $('.change-password-header').hide()
   $('#change-password-form').hide()
-  $('.change-password-auth-display').hide()
   $('#sign-out-button').hide()
   $('#create-beer').hide()
   $('#show-beer').hide()

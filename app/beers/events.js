@@ -2,33 +2,23 @@
 
 const beersUi = require('./ui.js')
 const beersApi = require('./api.js')
-/* {
-  indexBeers,
-  showBeer,
-  deleteBeer,
-  updateBeer,
-  createBeer
-} */
+
 const getFormFields = require('../../lib/get-form-fields.js')
 const store = require('../store.js')
 
 const onIndexBeers = () => {
   $('#beers-display').toggle()
-  // $('.card.onCreateSuccess').toggle()
-  $('.card.onCreateSuccess').html('')
+  $('#new-beer-display').html('')
+  $('div.card.onCreateSuccess').html('')
 
   beersApi
     .indexBeers()
-    // JavaScript Promises
-    // if the request/response is successful, run this callback
     .then((response) => beersUi.onIndexBeersSuccess(response))
-    // if the request/response has an error, run this callback
     .catch(() => beersUi.onIndexBeersFailure())
 }
 
 const onShowBeer = (event) => {
   event.preventDefault()
-
   const form = event.target
   const data = getFormFields(form)
   // console.log(data)
@@ -40,12 +30,10 @@ const onShowBeer = (event) => {
 }
 
 const onDeleteBeer = (event) => {
-  // prevent the page from reloading due to the submit action
   event.preventDefault()
 
-  // store the element that emitted the event in a variable
   const form = event.target
-  // pass the form to getFormFields and store the data object in another variable
+
   const data = getFormFields(form)
   // console.log(data)
 
@@ -57,12 +45,8 @@ const onDeleteBeer = (event) => {
 }
 
 const onUpdateBeer = (event) => {
-  // prevent the page from reloading due to the submit action
   event.preventDefault()
-
-  // store the element that emitted the event in a variable
   const form = event.target
-  // pass the form to getFormFields and store the data object in another variable
   const data = getFormFields(form)
   // console.log(data)
 
@@ -73,15 +57,9 @@ const onUpdateBeer = (event) => {
 }
 
 const onCreateBeer = (event) => {
-  // prevent the page from reloading due to the submit action
   event.preventDefault()
-
-  // store the element that emitted the event in a variable
   const form = event.target
-  // pass the form to getFormFields and store the data object in another variable
   const data = getFormFields(form)
-
-  // puts the user(from the store) as the owner
   data.beer.owner = store.user
   // console.log(data)
 
@@ -103,12 +81,8 @@ const onUpdateCurrentBeerCard = function () {
 }
 
 const onDeleteListBeer = function (event) {
-  // event.target will tell us more information about the thing that was clicked
   const deleteButton = event.target
-
-  // we need to find the id of the beer
   const beerId = $(deleteButton).data('id')
-
   // console.log(beerId)
 
   beersApi
@@ -120,17 +94,9 @@ const onDeleteListBeer = function (event) {
 
 const onUpdateListBeer = function (event) {
   event.preventDefault()
-  // event.target will tell us more information about the thing that was clicked
   const updateForm = event.target
-
-  // we need to find the id of the beer
   const beerId = $(updateForm).data('id')
-
-  // use getFormFields to get the data from the form
   const data = getFormFields(updateForm)
-  // console.log(data)
-  // console.log(beerId)
-  // data.beer.id = beerId
 
   beersApi
     .updateBeer(data, beerId)
@@ -138,9 +104,6 @@ const onUpdateListBeer = function (event) {
     .catch(() => beersUi.onUpdateBeerFailure())
 }
 
-// export our function(s)
-// module.exports will be what is "returned" when this file is required in another file
-// if I want to access a specific property of this export object, I have to say "<export variable name>.<function name>"
 module.exports = {
   onIndexBeers,
   onShowBeer,

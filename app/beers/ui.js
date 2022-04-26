@@ -2,14 +2,9 @@ const store = require('../store.js')
 
 const onIndexBeersSuccess = function (response) {
   // string to represent the html of our beers display
-  // initialize as empty
   let beersHtml = ''
 
-  // use forEach to display every beer
   response.beers.forEach((beer) => {
-    // beersHtml += '<li>' + beer.name + '</li>'
-    // beersHtml = beersHtml + '<li>' + beer.name + '</li>'
-
     beersHtml += `
                   <div class="card indexBeerCard">
                     <h2 class="card-header indexBeerCard text-center" style="height: 3rem">${beer.name}</h2>

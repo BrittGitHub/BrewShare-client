@@ -6,8 +6,6 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-
-  // get data from form
   const form = event.target
   const data = getFormFields(form)
   // console.log(data)
@@ -19,8 +17,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-
-  // get data from form
   const form = event.target
   const data = getFormFields(form)
   // console.log(data)
@@ -32,14 +28,14 @@ const onSignIn = function (event) {
 }
 
 const onPullUpChangeForm = function () {
+  $('.change-password-auth-display').html('')
   $('#change-password-form').toggle()
   $('.changePassCard').toggle()
+  $('.change-password-auth-display').show()
 }
 
 const onChangePassword = function (event) {
   event.preventDefault()
-
-  // get data from form
   const form = event.target
   const data = getFormFields(form)
   // console.log(data)

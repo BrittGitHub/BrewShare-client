@@ -46,11 +46,11 @@ const onIndexBeersSuccess = function (response) {
   $('.update-beer-list').hide()
   $('form').trigger('reset')
 
-  $('#error-message').text('')
+  $('#index-error-message').text('')
 }
 
 const onIndexBeersFailure = function () {
-  $('#error-message').text('There was an error')
+  $('#index-error-message').text('There was an error')
 }
 
 const onShowBeerSuccess = function (response) {
@@ -76,7 +76,7 @@ const onDeleteBeerSuccess = function () {
 }
 
 const onDeleteBeerFailure = function () {
-  $('#error-message').text('Failure while trying to delete beer')
+  $('#index-error-message').text('Failure while trying to delete beer')
 }
 
 const onUpdateBeerSuccess = function () {
@@ -86,7 +86,7 @@ const onUpdateBeerSuccess = function () {
 }
 
 const onUpdateBeerFailure = function () {
-  $('#error-message').text('Failure while trying to update beer')
+  $('#index-error-message').text('Failure while trying to update beer')
 }
 
 const onCreateBeerSuccess = function (response) {
@@ -114,7 +114,7 @@ const onCreateBeerSuccess = function (response) {
 }
 
 const onCreateBeerFailure = function () {
-  $('#error-message').text('Failure while trying to create beer')
+  $('#new-beer-error-message').text('Failure while trying to create beer')
 }
 
 module.exports = {

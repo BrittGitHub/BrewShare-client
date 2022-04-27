@@ -19,6 +19,7 @@ $(() => {
   $('.createBeerCard').hide()
   $('#new-beer-display').hide()
   $('.addNewBeer').hide()
+  $('#new-beer-error-message').hide()
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)

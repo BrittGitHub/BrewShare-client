@@ -3,7 +3,8 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = function () {
-  $('.sign-up-auth-display').html('<p>User signed up successfully</p>')
+  $('.sign-up-auth-display').html('<p class="sign-up-success-text">Sign up successful!</p>')
+  $('.sign-up-success-text').fadeOut(3000)
 
   $('form').trigger('reset')
 }
@@ -15,7 +16,8 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (response) {
   $('.sign-up-auth-display').html('')
   $('.change-password-auth-display').html('')
-  $('.sign-in-auth-display').html('<p>User signed in successfully</p>')
+  $('.sign-in-auth-display').html('<p class="sign-in-success-text">Signed in successfully!</p>')
+  $('.sign-in-success-text').fadeOut(3000)
   $('.sign-in-auth-display').show()
 
   $('.sign-up-header').hide()
@@ -64,8 +66,8 @@ const onChangePasswordFailure = function () {
 }
 
 const onSignOutSuccess = function () {
-  $('.sign-out-auth-display').html('<p>User signed out successfully</p>')
-
+  $('.sign-out-auth-display').html('<p class="sign-out-success-text">You are signed out!</p>')
+  $('.sign-out-success-text').fadeOut(3000)
   $('.change-password-header').hide()
   $('#change-password-form').hide()
   $('#sign-out-button').hide()

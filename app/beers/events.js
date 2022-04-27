@@ -74,6 +74,8 @@ const onPullUpForm = function () {
   $('#create-beer').toggle()
   $('.card-header.createBeerCard').toggle()
   $('#new-beer-display').toggle()
+  $('#new-beer-error-message').toggle('')
+  $('#new-beer-error-message').html('')
 }
 
 const onUpdateCurrentBeerCard = function () {

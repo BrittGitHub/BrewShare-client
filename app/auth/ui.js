@@ -36,9 +36,9 @@ const onSignInSuccess = function (response) {
   $('#pullUpChangePassButton').show()
 
   $('#sign-out-button').show()
-
   $('.sign-out-auth-display').html('')
   $('.sign-out-auth-display').show()
+
   $('.addNewBeer').show()
   $('#show-beer').show()
   $('#index-beers').show()
@@ -76,14 +76,28 @@ const onSignOutSuccess = function () {
   $('#index-beers').hide()
   $('.pullUpChangePass').hide()
   $('.addNewBeer').hide()
-  $('.card').hide()
+  $('.createBeerCard').hide()
+  $('.onCreateSuccess').hide()
+  $('.indexBeerCard').hide()
+  $('.changePassCard').hide()
+  $('.change-password-auth-display').hide()
+  $('#new-beer-display').toggle()
+
+  $('#index-error-message').hide()
+  $('#index-error-message').html('')
+
+  $('#beers-display').hide()
+
+  $('#new-beer-error-message').hide()
+  $('#new-beer-error-message').html('')
+
   $('.sign-in-header').show()
-  $('.sign-in-auth-display').hide()
   $('#sign-in-form').show()
   $('.sign-up-header').show()
   $('#sign-up-form').show()
   $('.sign-up-auth-display').show()
 
+  store.user = ''
   $('form').trigger('reset')
 }
 

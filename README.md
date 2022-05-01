@@ -10,8 +10,9 @@ Please visit the following link: https://brittgithub.github.io/BrewShare-client/
 
 ## Project Planning
 
+
 #### Wireframe
-To view a first draft wireframe of the app, [click here](https://imgur.com/gA7kUj1).
+To view a first draft wireframe of the app, [click here](/public/BrewShare_Wireframe_v1.png).
 
 #### User Stories
 1. As a user, I would like the ability to add/create beers

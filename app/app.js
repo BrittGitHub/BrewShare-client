@@ -1,25 +1,20 @@
-// use require with a reference to bundle the file and use it in this file
 const authEvents = require('./auth/events.js')
 const beerEvents = require('./beers/events.js')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
 
 $(() => {
   $('.change-password-header').hide()
   $('#change-password-form').hide()
   $('#pullUpChangePassButton').hide()
   $('.changePassCard').hide()
-  // $('.change-password-auth-display').hide()
   $('#sign-out-button').hide()
   $('#create-beer').hide()
   $('#show-beer').hide()
   $('#index-beers').hide()
   $('#beers-display').hide()
   $('.createBeerCard').hide()
-  $('#new-beer-display').hide()
   $('.addNewBeer').hide()
   $('#new-beer-error-message').hide()
+  $('#index-error-message').hide()
   $('#sign-up-form').on('submit', authEvents.onSignUp)
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)

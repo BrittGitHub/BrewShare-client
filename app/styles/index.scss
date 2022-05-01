@@ -45,20 +45,16 @@ img.rounded-corners {
   justify-content: center;
   height: 20px;
   font-family: 'Fredericka the Great', serif;
-  // margin-top: 20px;
 }
 
 .change-password-header {
   display: flex;
   justify-content: center;
-  // margin-top: 10px;
 }
 .change-password-auth-display {
   display: flex;
   justify-content: center;
-  // height: 20px;
   font-family: 'Fredericka the Great', serif;
-  // margin-top: 20px;
   display: hidden;
 }
 
@@ -70,15 +66,8 @@ margin-left: auto;
   display: flex;
   justify-content: center;
   height: 20px;
-  // visibility: visible;
   font-family: 'Fredericka the Great', serif;
-  // margin-top: 20px;
 }
-
-// p.sign-in-auth-display {
-//   transition-duration:1s; /* <= creates fade out effect */
-//   transition-delay:1s;
-// }
 
 
 @media only screen and (min-width: 300px) {
@@ -122,7 +111,6 @@ button {
     padding: 7px 12px;
     text-align: center;
     text-decoration: none;
-//   display: flex;
     font-size: 12px;
     margin: 2px 2px;
 }
@@ -135,7 +123,6 @@ button {
     padding: 7px 12px;
     text-align: center;
     text-decoration: none;
-//   display: flex;
     font-size: 12px;
     margin: 2px 2px;
 }
@@ -154,7 +141,7 @@ button {
 }
 
 .card-header.createBeerCard {
-  display: hidden;
+  display: visible;
   background-color:#ff6e40;
   border-color: #ff6e40;
 }
@@ -180,6 +167,14 @@ button {
 }
 
 #new-beer-display {
+  display: hidden;
+}
+
+#new-beer-error-message {
+  display: hidden;
+}
+
+#index-error-message {
   display: hidden;
 }
 

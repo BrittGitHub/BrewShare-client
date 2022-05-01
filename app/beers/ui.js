@@ -1,7 +1,6 @@
 const store = require('../store.js')
 
 const onIndexBeersSuccess = function (response) {
-  // string to represent the html of our beers display
   let beersHtml = ''
 
   response.beers.forEach((beer) => {
@@ -46,11 +45,12 @@ const onIndexBeersSuccess = function (response) {
   $('.update-beer-list').hide()
   $('form').trigger('reset')
 
-  $('#index-error-message').text('')
+  hideErrorMessages()
 }
 
 const onIndexBeersFailure = function () {
   $('#index-error-message').text('There was an error')
+  $('#index-error-message').show()
 }
 
 const onShowBeerSuccess = function (response) {
@@ -61,32 +61,38 @@ const onShowBeerSuccess = function (response) {
                       </div>
                     `
   $('#beers-display').html(beerHtml)
+  hideErrorMessages()
 
   $('form').trigger('reset')
 }
 
 const onShowBeerFailure = function () {
   $('#error-message').text('Failure while trying to show beer')
+  $('#error-message').show()
 }
 
 const onDeleteBeerSuccess = function () {
   $('#beers-display').html('Success. Beer deleted!')
+  hideErrorMessages()
 
   $('form').trigger('reset')
 }
 
 const onDeleteBeerFailure = function () {
   $('#index-error-message').text('Failure while trying to delete beer')
+  $('#index-error-message').show()
 }
 
 const onUpdateBeerSuccess = function () {
   $('#beers-display').html('Success. Beer updated!')
+  hideErrorMessages()
 
   $('form').trigger('reset')
 }
 
 const onUpdateBeerFailure = function () {
   $('#index-error-message').text('Failure while trying to update beer')
+  $('#index-error-message').show()
 }
 
 const onCreateBeerSuccess = function (response) {
@@ -109,12 +115,22 @@ const onCreateBeerSuccess = function (response) {
                       </div>
                     `
   $('#new-beer-display').html(beerHtml)
+  $('#new-beer-display').show()
+  hideErrorMessages()
 
   $('form').trigger('reset')
 }
 
 const onCreateBeerFailure = function () {
   $('#new-beer-error-message').text('Failure while trying to create beer')
+  $('#new-beer-error-message').show()
+}
+
+const hideErrorMessages = function () {
+  $('#new-beer-error-message').text('')
+  $('#new-beer-error-message').hide()
+  $('#index-error-message').text('')
+  $('#index-error-message').hide()
 }
 
 module.exports = {
@@ -128,6 +144,4 @@ module.exports = {
   onUpdateBeerFailure,
   onCreateBeerSuccess,
   onCreateBeerFailure
-  // onPullUpFormSuccess,
-  // onPullUpFormFailure
 }

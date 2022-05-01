@@ -10,6 +10,7 @@ const onIndexBeers = () => {
   $('#beers-display').toggle()
   $('#new-beer-display').html('')
   $('div.card.onCreateSuccess').html('')
+  $('#index-error-message').toggle()
 
   beersApi
     .indexBeers()
@@ -38,7 +39,6 @@ const onDeleteBeer = (event) => {
   // console.log(data)
 
   beersApi
-    // .deleteBook(data)
     .deleteBeer(data.id)
     .then(() => beersUi.onDeleteBeerSuccess())
     .catch(() => beersUi.onDeleteBeerFailure())
@@ -74,7 +74,7 @@ const onPullUpForm = function () {
   $('#create-beer').toggle()
   $('.card-header.createBeerCard').toggle()
   $('#new-beer-display').toggle()
-  $('#new-beer-error-message').toggle('')
+  $('#new-beer-error-message').toggle()
   $('#new-beer-error-message').html('')
 }
 
@@ -88,7 +88,6 @@ const onDeleteListBeer = function (event) {
   // console.log(beerId)
 
   beersApi
-    // .deleteBeer({ id: beerId })
     .deleteBeer(beerId)
     .then(() => beersUi.onDeleteBeerSuccess())
     .catch(() => beersUi.onDeleteBeerFailure())

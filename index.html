@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>BrewShare</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="public/BrewShareLogo.png" width="32" height="32" class="d-inline-block align-top wdn-stretch rounded-corners" alt="">
+        </a>
+
+        <section class="sign-out .ml-auto">
+          <button id="sign-out-button">Sign Out</button>
+        </section>
+      </nav>
+      
+      <h1>BrewShare</h1>
+
+        <h4 class="sign-up-header">Signup to start logging your favorite brews today!</h4>
+        <form id="sign-up-form">
+          <input name="credentials[email]" type="email" placeholder="Email">
+          <input name="credentials[password]" type="password" placeholder="Enter password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again">
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <section class="sign-up-auth-display"></section>
+        
+        <h4 class="sign-in-header">Already have an account, sign in below!</h4>
+        <form id="sign-in-form">
+          <input name="credentials[email]" type="email" placeholder="Email">
+          <input name="credentials[password]" type="password" placeholder="Enter password">
+          <button type="submit">Sign In</button>
+        </form>
+
+        <section class="sign-in-auth-display"></section>
+
+        <section class="sign-out-auth-display"></section>
+
+        <section class="pullUpChangePass">
+          <button id="pullUpChangePassButton">Change Password +</button>
+        </section>
+        <div class="card changePassCard">
+        <form id="change-password-form">
+          <input name="passwords[old]" type="password" placeholder="Enter old password">
+          <input name="passwords[new]" type="password" placeholder="Enter new password">
+          <button type="submit">Change Password</button>
+        </form>
+        </div>
+
+        <section class="change-password-auth-display"></section>
+
+        <section class="addNewBeer">
+          <button id="addNewBeerButton">Log a New Beer +</button>
+          <p id="new-beer-error-message"></p>
+        </section>
+
+        <div class="card createBeerCard">
+          <h2 class="card-header createBeerCard text-center" style="height: 3rem">Log A Beer!</h2>
+          <form id="create-beer">
+            <div class="form-group">
+              <label for="BeerName">Beer Name*</label>
+              <input name="beer[name]" type="text" class="form-control" placeholder="Enter Beer Name">
+            </div>
+            <div class="form-group">
+              <label for="beerStyle">Style of Beer*</label>
+              <input name="beer[beerStyle]" type="text" class="form-control" placeholder="Style">
+            </div>
+            <div class="form-group">
+              <label for="abv">ABV%</label>
+              <input name="beer[abv]" type="text" class="form-control" placeholder="ABV Percentage Number Only">
+            </div>
+            <div class="form-group">
+              <label for="brewer">Brewer</label>
+              <input name="beer[brewer]" type="text" class="form-control" placeholder="From which Brewery">
+            </div>
+            <div class="form-group">
+              <label for="brewerCountry">Brewery Country</label>
+              <input name="beer[brewerCountry]" type="text" class="form-control" placeholder="Brewery Country">
+            </div>
+            <div class="form-group">
+              <label for="consumptionType">Consumption Type</label>
+              <input name="beer[consumptionType]" type="text" class="form-control" placeholder="Bottle, Can, Draught, etc">
+            </div>
+            <div class="form-group">
+              <label for="personalRatingNum">Rating(Number)</label>
+              <input name="beer[personalRatingNum]" type="text" class="form-control" placeholder="0-5, 5 being excellent">
+            </div>
+            <div class="form-group">
+              <label for="ratingDescription">Description</label>
+              <input name="beer[ratingDescription]" type="text" class="form-control" placeholder="Description of beer or rating">
+            </div>
+            <div class="form-group">
+              <label for="purchasedLocation">Purchase Location</label>
+              <input name="beer[purchasedLocation]" type="text" class="form-control" placeholder="Where did you purchase this beer?">
+            </div>
+            <div class="form-group">
+              <label for="purchasedPrice">Purchase Price</label>
+              <input name="beer[purchasedPrice]" type="text" class="form-control" placeholder="What was the cost of the beer?">
+            </div>
+            <div class="form-group">
+              <label for="purchasedDate">Date of Purchase</label>
+              <input name="beer[purchasedDate]" type="text" class="form-control" placeholder="YYYY-MM-DD">
+            </div>
+            <div class="form-group">
+            <medium id="starKey" class="form-text">* Required</medium>
+            </div>
+            <button type="submit" class="btn btn-primary">Log a New Brew</button>
+          </form>
+        </div>
+
+        <section id="new-beer-display"></section>
+
+        <button id="index-beers">Show All My Logged Brews +</button>
+
+        <p id="index-error-message"></p>
+        
+        <section id="beers-display"></section>
+
+    </body>
+</html>

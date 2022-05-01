@@ -1,0 +1,197 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+img.rounded-corners {
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 375px) { 
+  h1 {
+    font-family: 'Rubik Bubbles', cursive;
+    color: #c53d13;
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
+}
+}
+
+ body {
+    background-color: #ff9e80;
+}
+
+.sign-up-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sign-up-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  font-family: 'Fredericka the Great', serif;
+  margin-top: 20px;
+  display: hidden;
+}
+
+.sign-in-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sign-in-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  font-family: 'Fredericka the Great', serif;
+}
+
+.change-password-header {
+  display: flex;
+  justify-content: center;
+}
+.change-password-auth-display {
+  display: flex;
+  justify-content: center;
+  font-family: 'Fredericka the Great', serif;
+  display: hidden;
+}
+
+.sign-out {
+margin-left: auto;
+}
+
+.sign-out-auth-display {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  font-family: 'Fredericka the Great', serif;
+}
+
+
+@media only screen and (min-width: 300px) {
+  #sign-up-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+@media only screen and (min-width: 300px) {
+  #sign-in-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+@media only screen and (min-width: 300px) {
+  #change-password-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
+
+@media only screen and (min-width: 360px) {
+  .navbar {
+  display: flex;
+  justify-content: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+}
+
+button {
+    background-color: #ff6e40;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 2px 2px;
+}
+
+.btn-primary {
+    background-color: #ff6e40;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 2px 2px;
+}
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-color: #ff9e80;
+  border-color:#ff6e40;
+}
+
+.card.createBeerCard {
+  display: hidden;
+}
+
+.card-header.createBeerCard {
+  display: visible;
+  background-color:#ff6e40;
+  border-color: #ff6e40;
+}
+
+.card.onCreateSuccess {
+  display: hidden;
+}
+
+.card-header.onCreateSuccess {
+  display: hidden;
+  background-color:#ff6e40;
+  border-color: #ff6e40;
+}
+
+.card.indexBeerCard {
+   display: hidden;
+}
+
+.card-header.indexBeerCard {
+  display: hidden;
+  background-color:#ff6e40;
+  border-color: #ff6e40;
+}
+
+#new-beer-display {
+  display: hidden;
+}
+
+#new-beer-error-message {
+  display: hidden;
+}
+
+#index-error-message {
+  display: hidden;
+}
+
+.card.changePassCard {
+  display: hidden;
+  background-color: #ff9e80;
+  border-color: #ff9e80;
+}
+
+.update-beer-list {
+   display: hidden;
+}
+
+div.form-group {
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+ // https://material.io/resources/color/#!/?view.left=0&view.right=0

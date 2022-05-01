@@ -109,6 +109,8 @@ margin-left: auto;
   .navbar {
   display: flex;
   justify-content: left;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 }
 
@@ -189,6 +191,12 @@ button {
 
 .update-beer-list {
    display: hidden;
+}
+
+div.form-group {
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
  // https://material.io/resources/color/#!/?view.left=0&view.right=0
